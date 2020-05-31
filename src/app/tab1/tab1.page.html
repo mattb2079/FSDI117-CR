@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      PROFILE
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="wrap">
+  
+    <ion-card class="info_box">
+      <h1>{{myBeast.name}}</h1>
+      <img src={{myBeast.imageURL}} alt="beast image">
+      
+    <div class="stat_line">
+      <h4 class="stat_name">Wins:</h4>
+      <h3 class="stat_value">{{myBeast.wins}}</h3>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Losses:</h4>
+      <h3 class="stat_value">{{myBeast.losses}}</h3>
+    </div><br>
+    </ion-card>
+  </div>
+
+
 </ion-content>

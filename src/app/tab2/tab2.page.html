@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      TRAINING
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,60 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<div class="wrap">
+
+  <ion-card class="info_box">
+    <h1>{{myBeast.name}}</h1>
+    <img src={{myBeast.imageURL}} alt="beast image">
+  </ion-card>
+
+  <ion-card class="info_box">
+    <div class="stat_line">
+      <h4 class="stat_name">Strength:</h4>
+      <h3 class="stat_value">{{myBeast.strength}}</h3>
+      <ion-button color="dark" (click)="trainStrength()">Train!</ion-button>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Speed:</h4>
+      <h3 class="stat_value">{{myBeast.speed}}</h3>
+      <ion-button color="dark" (click)="trainSpeed()">Train!</ion-button>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Endurance:</h4>
+      <h3 class="stat_value">{{myBeast.endurance}}</h3>
+      <ion-button color="dark" (click)="trainEndurance()">Train!</ion-button>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Attack 1:</h4>
+      <h3 class="stat_value">{{myBeast.bite}}</h3>
+      <ion-button color="dark" (click)="trainAttack1()">Train!</ion-button>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Attack 2:</h4>
+      <h3 class="stat_value">{{myBeast.claw}}</h3>
+      <ion-button color="dark" (click)="trainAttack2()">Train!</ion-button>
+    </div><br>
+    <div class="stat_line">
+      <h4 class="stat_name">Attack 3:</h4>
+      <h3 class="stat_value">{{myBeast.grapple}}</h3>
+      <ion-button color="dark" (click)="trainAttack3()">Train!</ion-button>
+    </div>
+  </ion-card>
+
+</div>
+
+<div class="wrap">
+  <ion-card class="info_box">
+
+    <h1>Training points: {{ myBeast.trainingPoints }}</h1>
+  </ion-card>
+
+  <ion-card class="info_box">
+
+    <h1>Results Window</h1>
+    <h4>{{ resultMessage }}</h4>
+
+  </ion-card>
+</div>
+
 </ion-content>

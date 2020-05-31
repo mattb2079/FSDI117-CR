@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      ARENA
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,73 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+  <div class="wrap">
+  
+    <ion-card class="info_box">
+      <h1>{{myBeast.name}}</h1>
+      <img src={{myBeast.imageURL}} alt="beast image"><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Strength:</h4>
+        <h3 class="stat_value">{{myBeast.strength}}</h3>
+      </div><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Speed:</h4>
+        <h3 class="stat_value">{{myBeast.speed}}</h3>
+      </div><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Endurance:</h4>
+        <h3 class="stat_value">{{myBeast.endurance}}</h3>
+      </div><br>
+      <h2>Health: {{ myBeast.health }}%</h2>
+    </ion-card>
+  
+    <ion-card class="info_box">
+      <h1>{{otherBeast.name}}</h1>
+      <img src={{otherBeast.imageURL}} alt="beast image"><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Strength:</h4>
+        <h3 class="stat_value">{{otherBeast.strength}}</h3>
+      </div><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Speed:</h4>
+        <h3 class="stat_value">{{otherBeast.speed}}</h3>
+      </div><br>
+      <div class="stat_line">
+        <h4 class="stat_name">Endurance:</h4>
+        <h3 class="stat_value">{{otherBeast.endurance}}</h3>
+      </div><br>
+      <h2>Health: {{ otherBeast.health }}%</h2>
+    </ion-card>
+  
+  </div>
+
+  <div class="wrap">
+    <ion-card class="info_box">
+      <div>
+        <ion-radio-group (ionChange)="onChangeHandler($event.detail.value)">
+    
+          <ion-radio slot="start" color="danger" value="Bite"></ion-radio>
+          <ion-label>Bite......</ion-label><br>
+          <ion-radio slot="start" color="danger" value="Claw"></ion-radio>
+          <ion-label>Claw.....</ion-label><br>
+          <ion-radio slot="start" color="danger" value="Grapple"></ion-radio>
+          <ion-label>Grapple</ion-label><br>
+    
+        </ion-radio-group>
+
+      </div>
+
+      <ion-button color="dark" (click)="attackRound()">Attack</ion-button>
+
+    </ion-card>
+
+    <ion-card class="info_box">
+
+      <h1>Results Window</h1>
+      <h3>{{ resultMessage }}</h3>
+
+    </ion-card>
+  </div>
+  
+  </ion-content>
+  

@@ -1,1 +1,52 @@
+ion-content{
+    display: flex;
+    --background: url('/assets/ruincityscape.jpg') no-repeat 100% 100%;
+}
 
+.info_box{
+    background-color: rgb(226, 209, 209);
+    text-align: center;
+    width: 300px;
+    border: solid darkred 10px;
+    border-radius: 3px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.info_box img{
+    width: 250px;
+    border: solid black 2px;
+    border-radius: 3px;
+}
+
+.stat_line{
+    display: inline-flex;
+    margin: auto;
+}
+
+.stat_name{
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.stat_value{    
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.button1{
+    margin-left: 20px;
+    --border-width: 10px;
+    --border-color: red;
+}
+
+ion-toolbar{
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Beast } from '../models/beast';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  myBeast: Beast = new Beast('A');
 
+  constructor() {
+    this.myBeast.strength = 22;
+  }
 }
